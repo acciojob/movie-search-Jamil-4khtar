@@ -45,18 +45,20 @@ function SearchMovies() {
 
 
             <div>
-                {error && <p>{error}</p>}
-                {
+                {error && <p>Invalid movie name. Please try again.</p>}
+                <ul>
+                    {
                     movies && movies.map((item, index) => (
-                        <div key={index}>
+                        <li key={index}>
                             <img src={item.Poster} alt={item.Title} />
                             <h2>{item.Title}</h2>
                             <p>Type: {item.Type}</p>
                             <p>Year: {item.Year}</p>
                             <p>IMDB ID: {item.imdbID}</p>
-                        </div>
+                        </li>
                     ))
-                }
+                    }
+                </ul>
             </div>
         </div>
     )

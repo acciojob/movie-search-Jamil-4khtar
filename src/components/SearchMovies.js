@@ -45,7 +45,7 @@ function SearchMovies() {
 
 
             <div>
-                {error && <p>Invalid movie name. Please try again.</p>}
+                {error && <p className='error'>Invalid movie name. Please try again.</p>}
                 <ul>
                     {
                     movies && movies.map((item, index) => (
